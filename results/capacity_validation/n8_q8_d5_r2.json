@@ -1,0 +1,78 @@
+{
+  "n": 8,
+  "ports": 8,
+  "distance": 5,
+  "memory_rounds": 2,
+  "noise_probability": 0.001,
+  "stim_version": "1.15.0",
+  "seed": 41819,
+  "status": "determinism_and_low_order_signature_checks_complete",
+  "stages": {
+    "build_seconds": 649.6673079999746,
+    "dem_seconds": 292.7277355999686,
+    "noiseless_seconds": 0.09165519999805838,
+    "fault_signature_seconds": 36.199621200037654
+  },
+  "cycles": [
+    {
+      "cycle": 0,
+      "physical_half_round_units": 96,
+      "abstract_half_round_units": 96,
+      "physical_rounds": 48.0
+    },
+    {
+      "cycle": 1,
+      "physical_half_round_units": 96,
+      "abstract_half_round_units": 96,
+      "physical_rounds": 48.0
+    }
+  ],
+  "num_qubits": 6362,
+  "num_detectors": 299680,
+  "num_observables": 68,
+  "num_ticks": 2130,
+  "circuit_file": "results/capacity_validation/n8_q8_d5_r2.stim",
+  "circuit_sha256": "49c1f6c508bb0165a7aa000b5a223a608efedfc40b269e92b3572b516417e442",
+  "dem_file": "results/capacity_validation/n8_q8_d5_r2.dem",
+  "dem_sha256": "7b7db76e3a0a7496ad66f727b760149560773a38b6ee4db7d30b2b0a8cde8c54",
+  "noiseless_check": {
+    "shots": 32,
+    "detector_events": 0,
+    "observable_events": 0
+  },
+  "fault_audit": {
+    "error_signatures": 5355712,
+    "detector_weight_histogram": {
+      "2": 1285824,
+      "3": 656800,
+      "4": 2423728,
+      "1": 65168,
+      "5": 675600,
+      "6": 210752,
+      "7": 29376,
+      "8": 8464
+    },
+    "undetected_single_signatures": [],
+    "two_signature_collision_examples": [],
+    "has_undetected_at_most_two_signature_candidate": false,
+    "scope": "All undecomposed DEM terms; no decoder correction or distance-five certificate"
+  },
+  "elapsed_seconds": 978.6863711999613,
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "<historical interpreter path omitted>",
+  "source_sha256": {
+    "hlp-dac\\src\\experiments\\capacity_validation\\__init__.py": "18aa1fe7295ecd6c3773d2bd9e6c18cbacca928e1791490436ca735e4c037826",
+    "hlp-dac\\src\\experiments\\capacity_validation\\allocation.py": "c459a2683ad16f45ce00e499b767895a53a8b48891328039ed5eab13a910574a",
+    "hlp-dac\\src\\experiments\\capacity_validation\\circuit.py": "9ea63d9e9fbad08a13d9b0b8b9bc62d327f5da76c0010b7ab11181563c65a09c",
+    "hlp-dac\\src\\experiments\\capacity_validation\\common.py": "d94ae6645c101931aad5856e09e0be0c7bde6f92185afad41256729367dd2fe0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\connectivity.py": "e4a8d1bc299d083fcd6abdae664d95e7fb111c89cadf4cc63d86338601a63664",
+    "hlp-dac\\src\\experiments\\capacity_validation\\geometry.py": "0f1332b5af60df4713e464c8844b2fa44f08ce14103b3e0e979a34a05e3a92c6",
+    "hlp-dac\\src\\experiments\\capacity_validation\\schedule.py": "708efc15ff650399316ee4e780fbf06b6bb925fe25561cbe14956590eced9cf0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\test_validation.py": "75247be1931b9d55a2aeaf7bfd85d85a8d41283426f3f9566fd798a55999ebe5",
+    "hlp-dac\\src\\experiments\\capacity_validation\\timing.py": "c3671ff6e3288ca5784966930d552230d1862842fa9519b84c9ef59be9d188f1",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\surface_code.py": "28e842ac60ca770b0d3548b79a239f57bdced08a7f6e4e7906206c95fcb874ee",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\lv1_codes.py": "ea639974bbf2696a6118146b7842d3a2c7f16e202af9bec3e4da6fcf3a33b92e",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\hierarchical_circuit.py": "8ea4aff4f7270afa85a5960365e7e8ac1d234ffb3d0e305c92cfa5aa05459064",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\high_level_utils.py": "dc07daa44c11e468891c2ec271d46ed797beea8b74254bf954c2e71c2a501598"
+  }
+}

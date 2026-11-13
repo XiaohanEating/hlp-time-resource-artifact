@@ -1,0 +1,8 @@
+This artifact contains circuit-generation modules from ShuttlebusMemory:
+https://github.com/Zihan-Chen-PhMA/ShuttlebusMemory
+The upstream license is reproduced in vendor/ShuttlebusMemory/LICENSE.
+Upstream code remains Apache-2.0 licensed; the root MIT license does not
+replace the upstream license. Revision and file hashes are in provenance/.
+Portable analysis modules contain path adaptations of locally developed
+experiment scripts. Original inputs are preserved by digest. Generated
+circuits are derived from the upstream circuit generator.

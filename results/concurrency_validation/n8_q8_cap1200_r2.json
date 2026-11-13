@@ -1,0 +1,109 @@
+{
+  "original_cross_layers": 8,
+  "new_cross_layers": 16,
+  "extra_cross_layers": 8,
+  "peak_cross_gates": 1200,
+  "layers": [
+    {
+      "original_tick": 133,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 0
+    },
+    {
+      "original_tick": 399,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 1
+    },
+    {
+      "original_tick": 665,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 2
+    },
+    {
+      "original_tick": 931,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 3
+    },
+    {
+      "original_tick": 1197,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 4
+    },
+    {
+      "original_tick": 1463,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 5
+    },
+    {
+      "original_tick": 1729,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 6
+    },
+    {
+      "original_tick": 1995,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        1200,
+        400
+      ],
+      "added_layers_before": 7
+    }
+  ],
+  "ideal_operation_hash": "6039643d83dcb3340e6e2df87ef1eee777ac3bdf29d9957885ec6f86e996622e",
+  "operation_order_unchanged": true,
+  "measurement_records_and_detector_definitions_unchanged": true,
+  "n": 8,
+  "ports": 8,
+  "cap": 1200,
+  "rounds": 2,
+  "source": "results/capacity_validation/n8_q8_d5_r2.stim",
+  "source_sha256": "49c1f6c508bb0165a7aa000b5a223a608efedfc40b269e92b3572b516417e442",
+  "output": "results/concurrency_validation/n8_q8_cap1200_r2_ideal.stim",
+  "output_sha256": "19430542da8778451c16e8fdc31386d471d6b4e0cded199035c208185b920b9f",
+  "noise": "omitted for ideal structural validation only",
+  "detectors": 299680,
+  "observables": 68,
+  "deterministic_detectors_and_observables": true,
+  "noiseless_shots": 32,
+  "noiseless_detection_events": 0,
+  "noiseless_observable_events": 0,
+  "protection": "SE round sequence and all measurement boundaries preserved; wall-clock windows gain extra gate layers",
+  "elapsed_seconds": 57.84843000001274,
+  "python": "<historical interpreter path omitted>",
+  "version": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "source_hashes": {
+    "hlp-dac\\src\\experiments\\concurrency_validation\\__init__.py": "e99aa3e03d862adb11797501d1d2d504d581bce253af0dafe90f2cc95072d7b2",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\common.py": "049fc9c9e296830e437e51efffa0d7f830e241c51c153b1c82e612f2410bfeb1",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\frontier.py": "e1437d6a50e0ee40a307a0956e066506d5b36a4920feb51824c7f5900f913c81",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\rebuild.py": "ff9a0804e7061b9052ac0399d9816e4ea677021976ba21c9a554e3fbbab25a18",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\test_frontier.py": "f58f9572b4b09eb8acb958d8a4be8bedfddd113254546fd84efbcb08a54f3fc4"
+  }
+}

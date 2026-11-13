@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-13",
+  "python": "3.10.18",
+  "numpy": "1.26.4",
+  "stim": "1.14.0",
+  "pytest": "9.1.1",
+  "tests_passed": 21,
+  "tests_skipped": 1,
+  "skip_reason": "Stim 1.15 tagged serialization API unavailable in the selected environment. No package or interpreter changes.",
+  "full_circuit_regeneration_rerun": false,
+  "new_noisy_samples": 0,
+  "decoder_runs": 0
+}

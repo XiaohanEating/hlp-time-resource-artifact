@@ -1,0 +1,802 @@
+{
+  "n": 8,
+  "ports": 4,
+  "rounds": 2,
+  "all_bus_windows_match": true,
+  "mismatches": [],
+  "expected_windows": 64,
+  "windows_checked": 64,
+  "windows": [
+    {
+      "patch": 0,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 1,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 2,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 3,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 4,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 5,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 6,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 7,
+      "cycle": 0,
+      "physical": [
+        2.0,
+        35.0
+      ],
+      "abstract": [
+        2.0,
+        35.0
+      ]
+    },
+    {
+      "patch": 8,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 9,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 10,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 11,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 12,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 13,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 14,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 15,
+      "cycle": 0,
+      "physical": [
+        36.0,
+        69.0
+      ],
+      "abstract": [
+        36.0,
+        69.0
+      ]
+    },
+    {
+      "patch": 16,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 17,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 18,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 19,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 20,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 21,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 22,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 23,
+      "cycle": 0,
+      "physical": [
+        70.0,
+        103.0
+      ],
+      "abstract": [
+        70.0,
+        103.0
+      ]
+    },
+    {
+      "patch": 24,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 25,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 26,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 27,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 28,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 29,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 30,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 31,
+      "cycle": 0,
+      "physical": [
+        104.0,
+        137.0
+      ],
+      "abstract": [
+        104.0,
+        137.0
+      ]
+    },
+    {
+      "patch": 0,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 1,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 2,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 3,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 4,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 5,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 6,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 7,
+      "cycle": 1,
+      "physical": [
+        138.0,
+        171.0
+      ],
+      "abstract": [
+        138.0,
+        171.0
+      ]
+    },
+    {
+      "patch": 8,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 9,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 10,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 11,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 12,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 13,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 14,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 15,
+      "cycle": 1,
+      "physical": [
+        172.0,
+        205.0
+      ],
+      "abstract": [
+        172.0,
+        205.0
+      ]
+    },
+    {
+      "patch": 16,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 17,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 18,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 19,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 20,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 21,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 22,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 23,
+      "cycle": 1,
+      "physical": [
+        206.0,
+        239.0
+      ],
+      "abstract": [
+        206.0,
+        239.0
+      ]
+    },
+    {
+      "patch": 24,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    },
+    {
+      "patch": 25,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    },
+    {
+      "patch": 26,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    },
+    {
+      "patch": 27,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    },
+    {
+      "patch": 28,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    },
+    {
+      "patch": 29,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    },
+    {
+      "patch": 30,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    },
+    {
+      "patch": 31,
+      "cycle": 1,
+      "physical": [
+        240.0,
+        273.0
+      ],
+      "abstract": [
+        240.0,
+        273.0
+      ]
+    }
+  ],
+  "physical_cx_gates": 1089920,
+  "physical_cx_layer_conflicts": 0,
+  "elementary_fault_locations": 2806528,
+  "single_pauli_branches": 20206592,
+  "distinct_location_double_pauli_branches": 204153052370560,
+  "note": "Timing and gate-layer legality only; no physical seconds or reliable error rate inferred",
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "<historical interpreter path omitted>",
+  "source_sha256": {
+    "hlp-dac\\src\\experiments\\capacity_validation\\__init__.py": "18aa1fe7295ecd6c3773d2bd9e6c18cbacca928e1791490436ca735e4c037826",
+    "hlp-dac\\src\\experiments\\capacity_validation\\allocation.py": "c459a2683ad16f45ce00e499b767895a53a8b48891328039ed5eab13a910574a",
+    "hlp-dac\\src\\experiments\\capacity_validation\\circuit.py": "9ea63d9e9fbad08a13d9b0b8b9bc62d327f5da76c0010b7ab11181563c65a09c",
+    "hlp-dac\\src\\experiments\\capacity_validation\\common.py": "d94ae6645c101931aad5856e09e0be0c7bde6f92185afad41256729367dd2fe0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\connectivity.py": "e4a8d1bc299d083fcd6abdae664d95e7fb111c89cadf4cc63d86338601a63664",
+    "hlp-dac\\src\\experiments\\capacity_validation\\geometry.py": "0f1332b5af60df4713e464c8844b2fa44f08ce14103b3e0e979a34a05e3a92c6",
+    "hlp-dac\\src\\experiments\\capacity_validation\\schedule.py": "708efc15ff650399316ee4e780fbf06b6bb925fe25561cbe14956590eced9cf0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\test_validation.py": "75247be1931b9d55a2aeaf7bfd85d85a8d41283426f3f9566fd798a55999ebe5",
+    "hlp-dac\\src\\experiments\\capacity_validation\\timing.py": "c3671ff6e3288ca5784966930d552230d1862842fa9519b84c9ef59be9d188f1",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\surface_code.py": "28e842ac60ca770b0d3548b79a239f57bdced08a7f6e4e7906206c95fcb874ee",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\lv1_codes.py": "ea639974bbf2696a6118146b7842d3a2c7f16e202af9bec3e4da6fcf3a33b92e",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\hierarchical_circuit.py": "8ea4aff4f7270afa85a5960365e7e8ac1d234ffb3d0e305c92cfa5aa05459064",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\high_level_utils.py": "dc07daa44c11e468891c2ec271d46ed797beea8b74254bf954c2e71c2a501598"
+  }
+}

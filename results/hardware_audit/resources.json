@@ -1,0 +1,154 @@
+{
+  "scope": "Count requested hardware resources without assuming a fabricated layout.\n\nStatic-edge counts assume fixed endpoint identities and a dedicated pairwise\nconnection for each requested pair. They do not count shared mediators, physical\nmicrowave channels, routed length, or manufacturing layers.\n",
+  "records": [
+    {
+      "n": 16,
+      "ports": 4,
+      "buses": 16,
+      "source": "hlp-dac\\results\\capacity_validation\\connectivity_n16_q4.json",
+      "source_sha256": "12ee3d7f651fc0c081e7abf5666c2db1d894c42b64b0e49f4f1a304d95d5c779",
+      "qubits": 15728,
+      "core_data": 6400,
+      "bus_data": 1600,
+      "core_ancillas": 6144,
+      "bus_ancillas": 1584,
+      "cross_edges": 25346,
+      "cross_vertices": 8000,
+      "cross_operations_per_cycle": 25600,
+      "peak_cross_gates": 1600,
+      "max_bus_cross_degree": 16,
+      "max_core_cross_degree": 4,
+      "max_bus_total_degree": 20,
+      "max_core_total_degree": 8,
+      "bipartite_planar_edge_limit": 15996,
+      "edges_exceeding_single_plane_bound": 9350,
+      "abstract_planar_edge_partition_lower_bound": 2,
+      "local_edges": 26080,
+      "total_requested_pairwise_edges": 51426,
+      "synchronized_local_gate_layers": [
+        6528,
+        6528,
+        6512,
+        6512
+      ],
+      "local_measurements_per_synchronized_round": 7728,
+      "bus_data_measurements_per_group": 1600
+    },
+    {
+      "n": 16,
+      "ports": 6,
+      "buses": 16,
+      "source": "hlp-dac\\results\\capacity_validation\\connectivity_n16_q6.json",
+      "source_sha256": "b37a07fc074b45bb2369ee6c6163db2551d4836299b2f6ae93e0f7770f6d17a1",
+      "qubits": 17328,
+      "core_data": 6400,
+      "bus_data": 2400,
+      "core_ancillas": 6144,
+      "bus_ancillas": 2384,
+      "cross_edges": 25246,
+      "cross_vertices": 8800,
+      "cross_operations_per_cycle": 25600,
+      "peak_cross_gates": 2400,
+      "max_bus_cross_degree": 12,
+      "max_core_cross_degree": 4,
+      "max_bus_total_degree": 16,
+      "max_core_total_degree": 8,
+      "bipartite_planar_edge_limit": 17596,
+      "edges_exceeding_single_plane_bound": 7650,
+      "abstract_planar_edge_partition_lower_bound": 2,
+      "local_edges": 28960,
+      "total_requested_pairwise_edges": 54206,
+      "synchronized_local_gate_layers": [
+        7248,
+        7248,
+        7232,
+        7232
+      ],
+      "local_measurements_per_synchronized_round": 8528,
+      "bus_data_measurements_per_group": 2400
+    },
+    {
+      "n": 16,
+      "ports": 8,
+      "buses": 16,
+      "source": "hlp-dac\\results\\capacity_validation\\connectivity_n16_q8.json",
+      "source_sha256": "2b4fa92339471cb9a54e6f6fe3ba83717ab77641fee72e18618a9067ef9667c4",
+      "qubits": 18928,
+      "core_data": 6400,
+      "bus_data": 3200,
+      "core_ancillas": 6144,
+      "bus_ancillas": 3184,
+      "cross_edges": 25402,
+      "cross_vertices": 9600,
+      "cross_operations_per_cycle": 25600,
+      "peak_cross_gates": 3200,
+      "max_bus_cross_degree": 8,
+      "max_core_cross_degree": 4,
+      "max_bus_total_degree": 12,
+      "max_core_total_degree": 8,
+      "bipartite_planar_edge_limit": 19196,
+      "edges_exceeding_single_plane_bound": 6206,
+      "abstract_planar_edge_partition_lower_bound": 2,
+      "local_edges": 31840,
+      "total_requested_pairwise_edges": 57242,
+      "synchronized_local_gate_layers": [
+        7968,
+        7968,
+        7952,
+        7952
+      ],
+      "local_measurements_per_synchronized_round": 9328,
+      "bus_data_measurements_per_group": 3200
+    }
+  ],
+  "cached_circuit_cross_checks": [
+    {
+      "source": "hlp-dac\\results\\circuit_cache\\squareberg_n16_pool16_alpha_1_d5_r1.stim",
+      "sha256": "1691517a741ff7c8fc0171b55fd9ca6ee521bff73656d9fea31e36bbe4f05b15",
+      "local_edge_count": 26080,
+      "cross_edge_count": 25346,
+      "local_layer_histogram": {
+        "6512": 216,
+        "6528": 216
+      },
+      "cross_layer_histogram": {
+        "1600": 16
+      },
+      "measurement_layer_histogram": {
+        "3744": 104,
+        "3984": 108,
+        "5344": 4
+      },
+      "max_local_gates": 6528,
+      "max_cross_gates": 1600
+    },
+    {
+      "source": "hlp-dac\\results\\capacity_validation\\n8_q8_d5_r2.stim",
+      "sha256": "49c1f6c508bb0165a7aa000b5a223a608efedfc40b269e92b3572b516417e442",
+      "local_edge_count": 10800,
+      "cross_edge_count": 6276,
+      "local_layer_histogram": {
+        "2696": 192,
+        "2704": 192
+      },
+      "cross_layer_histogram": {
+        "1600": 8
+      },
+      "measurement_layer_histogram": {
+        "1424": 88,
+        "1704": 96,
+        "3024": 8
+      },
+      "max_local_gates": 2704,
+      "max_cross_gates": 1600
+    }
+  ],
+  "python": "<historical interpreter path omitted>",
+  "python_version": "3.12.15",
+  "elapsed_seconds": 3.7921664000023156,
+  "source_hashes": {
+    "hlp-dac\\src\\experiments\\hardware_audit\\resources.py": "0f2d1268d7351a0f8b3ee82082bbef46161b68a407010e3062c48dfc806a5076",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\surface_code.py": "28e842ac60ca770b0d3548b79a239f57bdced08a7f6e4e7906206c95fcb874ee",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\common.py": "049fc9c9e296830e437e51efffa0d7f830e241c51c153b1c82e612f2410bfeb1"
+  }
+}

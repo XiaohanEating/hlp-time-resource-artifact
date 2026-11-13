@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/Zihan-Chen-PhMA/ShuttlebusMemory",
+  "commit": "df961c7fdadebb1b45759e7239cb47beff3d9be9",
+  "working_tree_patch": "upstream-local-changes.patch",
+  "scope": "Only allowlisted circuit modules are redistributed."
+}

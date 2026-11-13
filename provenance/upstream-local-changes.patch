@@ -1,0 +1,201 @@
+diff --git a/src/circuit/high_level_utils.py b/src/circuit/high_level_utils.py
+index 3d41f7c..9eab2ae 100644
+--- a/src/circuit/high_level_utils.py
++++ b/src/circuit/high_level_utils.py
+@@ -639,17 +639,19 @@ class MultiPatchCircuit:
+         # Reset and Meas:
+         resetCircBuffer = CircInstCellStrictBuffer()
+         measCircBuffer = CircInstCellStrictBuffer()
+-        for code_patch in self.code_patches:
+-            resetCircBuffer += code_patch.SECircCells_manager.index_2_CircCell[0]
+-            measCircBuffer += code_patch.SECircCells_manager.index_2_CircCell[-1]
++        resetCircBuffer.extend([code_patch.SECircCells_manager.index_2_CircCell[0]
++                                for code_patch in self.code_patches])
++        measCircBuffer.extend([code_patch.SECircCells_manager.index_2_CircCell[-1]
++                               for code_patch in self.code_patches])
+         self.SEIndex_2_circInstCells[0] = resetCircBuffer
+-        self.SEIndex_2_circInstCells[-1] = measCircBuffer 
++        self.SEIndex_2_circInstCells[-1] = measCircBuffer
+         for gateIndex in self.SEGateIndices:
+             gateCircBuffer = CircInstCellStrictBuffer()
++            gate_cells = []
+             for code_patch in self.code_patches:
+                 if gateIndex in code_patch.SECircCells_manager.index_2_CircCell:
+-                    gateCircBuffer += code_patch.SECircCells_manager\
+-                                      .index_2_CircCell[gateIndex]
++                    gate_cells.append(code_patch.SECircCells_manager
++                                      .index_2_CircCell[gateIndex])
+                 else:
+                     if Noise.IDLE in code_patch.noise_config.noises:
+                         idling_cell = CircInstCellSinglet().from_InstCell(GATEInstCell())
+@@ -659,7 +661,8 @@ class MultiPatchCircuit:
+                                 targets=code_patch.qubit_ids,
+                                 gate_args=code_patch.noise_config.noises[Noise.IDLE]
+                             )
+-                        gateCircBuffer += idling_cell
++                        gate_cells.append(idling_cell)
++            gateCircBuffer.extend(gate_cells)
+             self.SEIndex_2_circInstCells[gateIndex] = gateCircBuffer
+         self.SE_compilation_flag = True
+     
+@@ -910,6 +913,7 @@ class MultiPatchCircuit:
+         if len(self.inter_cnot_register) == 0 and len(self.inter_reversed_cnot_register) == 0:
+             return
+         cnot_cell = CircInstCellStrictBuffer(type=CellType.GATEInstCell)
++        cnot_cells = []
+         used_qubits = set()
+         for ctrl_port in self.inter_cnot_register:
+             ctrl_patch = self.code_patches[ctrl_port[0]]
+@@ -950,7 +954,7 @@ class MultiPatchCircuit:
+                         targets=cnot_targets,
+                         gate_args=[self.noise_config.noises[Noise.TQGATE]]
+                     )
+-            cnot_cell += cnot_small_cell
++            cnot_cells.append(cnot_small_cell)
+             for qubit in ctrl_patch.code.qubits:
+                 if qubit.qubit_type == QubitType.X_ancilla:
+                     if qubit.position not in c_pos_2_t_pos:
+@@ -1011,7 +1015,7 @@ class MultiPatchCircuit:
+                         targets=cnot_targets,
+                         gate_args=[self.noise_config.noises[Noise.TQGATE]]
+                     )
+-            cnot_cell += cnot_small_cell
++            cnot_cells.append(cnot_small_cell)
+             for qubit in ctrl_patch.code.qubits:
+                 if qubit.qubit_type == QubitType.X_ancilla:
+                     if qubit.position not in c_pos_2_t_pos:
+@@ -1034,6 +1038,7 @@ class MultiPatchCircuit:
+                         .symmetric_difference_update(
+                             [(c_qubit.circuit_id, Pauli.Z)]
+                         )
++        cnot_cell.extend(cnot_cells)
+         if Noise.IDLE in self.noise_config.noises:
+             idling_qubits = set()
+             for code_patch in self.code_patches:
+@@ -1053,21 +1058,24 @@ class MultiPatchCircuit:
+             
+     def do_next_SE(self):
+         reset_buffer = CircInstCellStrictBuffer(type=CellType.RESETInstCell)
++        reset_cells = []
+         for code_patch in self.code_patches:
+             code_patch.update_SE_cells()
+-            reset_buffer += code_patch.SECircCells_manager.index_2_CircCell[0]
++            reset_cells.append(code_patch.SECircCells_manager.index_2_CircCell[0])
+             code_patch.update_active_status_after_reset()
++        reset_buffer.extend(reset_cells)
+         self.update_flow_pre_SE()
+         self.SEIndex_2_circInstCells[0] = reset_buffer
+         for index in sorted(self.SEGateIndices):
+             gate_buffer = CircInstCellStrictBuffer(type=CellType.GATEInstCell)
++            gate_cells = []
+             for code_patch in self.code_patches:
+                 if code_patch.active == False \
+                    or code_patch.logical_op_following_se is None \
+                    or code_patch.logical_op_following_se == LogicalOp.LNONE:
+                     continue
+                 if index in code_patch.SECircCells_manager.index_2_CircCell:
+-                    gate_buffer += code_patch.SECircCells_manager.index_2_CircCell[index]
++                    gate_cells.append(code_patch.SECircCells_manager.index_2_CircCell[index])
+                 else:
+                     if Noise.IDLE in code_patch.noise_config:
+                         idling_cell = CircInstCellSinglet().from_InstCell(GATEInstCell())
+@@ -1077,17 +1085,18 @@ class MultiPatchCircuit:
+                                 targets=code_patch.qubit_ids,
+                                 gate_args=code_patch.noise_config.noises[Noise.IDLE]
+                             )
+-                        gate_buffer += idling_cell
++                        gate_cells.append(idling_cell)
++            gate_buffer.extend(gate_cells)
+             self.SEIndex_2_circInstCells[index] = gate_buffer
+         meas_buffer = CircInstCellStrictBuffer(type=CellType.MEASInstCell)
+-        for code_patch in self.code_patches:
+-            meas_buffer += code_patch.SECircCells_manager.index_2_CircCell[-1]
++        meas_buffer.extend([code_patch.SECircCells_manager.index_2_CircCell[-1]
++                            for code_patch in self.code_patches])
+         self.SEIndex_2_circInstCells[-1] = meas_buffer
+         self.commit_SE_round()
+         self.set_detectors()
+         for code_patch in self.code_patches:
+             code_patch.update_active_status_after_meas()
+-            code_patch.clear_current_logic_op()   
++            code_patch.clear_current_logic_op()
+         self.update_flow_post_SE()
+         pass
+ 
+diff --git a/src/circuit/low_level_utils.py b/src/circuit/low_level_utils.py
+index 4ccd634..3086c57 100644
+--- a/src/circuit/low_level_utils.py
++++ b/src/circuit/low_level_utils.py
+@@ -372,6 +372,39 @@ class CircInstCellStrictBuffer:
+             self.circInstcellbuff += second
+             return self
+ 
++    def extend(self, seconds: Iterable[CircInstCellSinglet]) -> CircInstCellStrictBuffer:
++        cells = list(seconds)
++        if not cells:
++            return self
++        if not self.strictness:
++            for second in cells:
++                self += second
++            return self
++        if self.circInstcellbuff is not None:
++            cells.insert(0, self.circInstcellbuff)
++        cell_type = cells[0].type
++        qubit_support = set()
++        for cell in cells:
++            if not cell._verify():
++                raise ValueError('verification failure.\n'
++                                 'Input CircInstCellSinglet does not match with its type.')
++            if cell.type != cell_type:
++                raise ValueError(f'{cell_type=} while {cell.type=}.\n'
++                                 'Addition failure due to type mismatch.')
++            if qubit_support.intersection(cell.qubit_support):
++                raise ValueError('to-be-added cell intersects with the current buffer')
++            qubit_support.update(cell.qubit_support)
++        merged = CircInstCellSinglet.from_type(cell_type)
++        for abs_inst in merged.abstractInst_2_CircInst:
++            instructions = [cell.abstractInst_2_CircInst[abs_inst]
++                            for cell in cells]
++            if not instructions_compatibility_check(instructions):
++                raise RuntimeError('failed to merge. incompatible with the added cell')
++            merged.abstractInst_2_CircInst[abs_inst] = merge_instructions(instructions)
++        self.circInstcellbuff = merged
++        self.type = cell_type
++        return self
++
+ # TODO: Deprecate this.        
+ class CircInstCellBuffer:
+ 
+@@ -645,7 +678,7 @@ def merge_instructions(circ_instructions: list[Optional[CircuitInstruction]]) \
+         raise ValueError('input circuit instructions should not be empty.')
+     AllNone = True
+     for circ_instruction in circ_instructions:
+-        if circ_instructions is None:
++        if circ_instruction is None:
+             continue
+         else:
+             instruction_name = circ_instruction.name
+@@ -658,6 +691,7 @@ def merge_instructions(circ_instructions: list[Optional[CircuitInstruction]]) \
+         return None
+     group_index_offset = 0  # MPP
+     anc_id_2_group_index: dict[int,int] = {}  # MPP
++    existing_target_vals = set()
+     for circ_instruction in circ_instructions:
+         if circ_instruction is None:
+             continue
+@@ -672,13 +706,13 @@ def merge_instructions(circ_instructions: list[Optional[CircuitInstruction]]) \
+             raise ValueError('merge failure due to instruction tag mismatch.\n '
+                     f'one {circ_instruction.tag=} while {instruction_tag=}')
+         if circ_instruction.name != 'MPP':
+-            existing_target_vals = set([target.value for target in instruction_targets])
+-            new_target_vals = set([target.value for target in 
++            new_target_vals = set([target.value for target in
+                                                 circ_instruction.targets_copy()])
+             repeated_target_vals = existing_target_vals.intersection(new_target_vals)
+             if repeated_target_vals:
+                 raise ValueError('merge failure due to repeated instructions.\n '
+                                 f'{repeated_target_vals=}')
++            existing_target_vals.update(new_target_vals)
+         else:
+             for anc_id in circ_instruction.anc_id_2_mpp_group_index:
+                 if anc_id in anc_id_2_group_index:

@@ -1,0 +1,13 @@
+{
+  "original_sources_unchanged": 35,
+  "capacity_artifacts_unchanged": 29,
+  "concurrency_artifacts_unchanged": 68,
+  "geometry_and_two_cached_circuits": "passed",
+  "local_links": 5,
+  "tests": "3 passed in 13.23s",
+  "source_retrieval_exclusions": "Two mismatched arXiv IDs excluded; unverified shared-control full text not used",
+  "python": "<historical interpreter path omitted>",
+  "pending_files": 0,
+  "current_manifest_entries": 28,
+  "harness_check": "passed"
+}

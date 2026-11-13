@@ -1,0 +1,550 @@
+{
+  "scope": "Extract required physical data-CNOT connectivity from existing dock maps.\n\nThe graph describes wires/gates the schedule requests, not proof those wires\ncan be manufactured or simultaneously controlled. No arbitrary bandwidth cap\nor fabricated physical pitch is introduced.\n",
+  "records": [
+    {
+      "n": 8,
+      "ports": 4,
+      "required_distinct_physical_data_links": 6276,
+      "graph_file": "results/capacity_validation/connectivity_n8_q4.json",
+      "graph_sha256": "d9f304a3d4ef564ac56fdf19e47f13c865524498776ba23ad104adcf86b9567f",
+      "bus_endpoint_degree_histogram": {
+        "8": 734,
+        "7": 12,
+        "6": 52,
+        "4": 2
+      },
+      "core_endpoint_degree_histogram": {
+        "4": 1530,
+        "2": 50,
+        "1": 2,
+        "3": 18
+      },
+      "per_bus_endpoint_degree_histograms": {
+        "4": {
+          "8": 98,
+          "7": 1,
+          "6": 1
+        },
+        "3": {
+          "8": 98,
+          "7": 1,
+          "6": 1
+        },
+        "6": {
+          "8": 98,
+          "7": 2
+        },
+        "7": {
+          "8": 73,
+          "7": 1,
+          "6": 25,
+          "4": 1
+        },
+        "2": {
+          "8": 98,
+          "7": 2
+        },
+        "1": {
+          "8": 98,
+          "7": 2
+        },
+        "5": {
+          "8": 98,
+          "7": 2
+        },
+        "0": {
+          "6": 25,
+          "8": 73,
+          "7": 1,
+          "4": 1
+        }
+      },
+      "distinct_bus_degree_histograms": 3,
+      "physical_cnot_layers": 8,
+      "physical_data_gate_conflicts": 0,
+      "maximum_simultaneous_data_cnots": 800
+    },
+    {
+      "n": 8,
+      "ports": 6,
+      "required_distinct_physical_data_links": 6276,
+      "graph_file": "results/capacity_validation/connectivity_n8_q6.json",
+      "graph_sha256": "dbaed772dfcb8b2ff437b28191707f1548d5cff1b8fe537d3464ebddf5ecf8cb",
+      "bus_endpoint_degree_histogram": {
+        "8": 342,
+        "4": 790,
+        "6": 48,
+        "3": 12,
+        "7": 8
+      },
+      "core_endpoint_degree_histogram": {
+        "4": 1530,
+        "2": 50,
+        "3": 18,
+        "1": 2
+      },
+      "per_bus_endpoint_degree_histograms": {
+        "4": {
+          "8": 49,
+          "4": 98,
+          "3": 2,
+          "7": 1
+        },
+        "0": {
+          "4": 99,
+          "6": 24,
+          "8": 24,
+          "3": 2,
+          "7": 1
+        },
+        "6": {
+          "4": 100,
+          "8": 48,
+          "7": 2
+        },
+        "1": {
+          "4": 100,
+          "8": 48,
+          "7": 2
+        },
+        "7": {
+          "6": 24,
+          "3": 2,
+          "8": 24,
+          "4": 99,
+          "7": 1
+        },
+        "3": {
+          "8": 49,
+          "4": 98,
+          "3": 2,
+          "7": 1
+        },
+        "2": {
+          "8": 50,
+          "4": 98,
+          "3": 2
+        },
+        "5": {
+          "4": 98,
+          "8": 50,
+          "3": 2
+        }
+      },
+      "distinct_bus_degree_histograms": 4,
+      "physical_cnot_layers": 8,
+      "physical_data_gate_conflicts": 0,
+      "maximum_simultaneous_data_cnots": 1200
+    },
+    {
+      "n": 8,
+      "ports": 8,
+      "required_distinct_physical_data_links": 6276,
+      "graph_file": "results/capacity_validation/connectivity_n8_q8.json",
+      "graph_sha256": "b9ca6a0dbff668a958cee0ac9c08cab2c9e6cba09b25b5e94ea6c6b2de2962fe",
+      "bus_endpoint_degree_histogram": {
+        "4": 1528,
+        "3": 22,
+        "2": 48,
+        "1": 2
+      },
+      "core_endpoint_degree_histogram": {
+        "4": 1530,
+        "2": 50,
+        "3": 18,
+        "1": 2
+      },
+      "per_bus_endpoint_degree_histograms": {
+        "4": {
+          "4": 197,
+          "3": 3
+        },
+        "0": {
+          "4": 171,
+          "2": 24,
+          "3": 4,
+          "1": 1
+        },
+        "6": {
+          "4": 198,
+          "3": 2
+        },
+        "1": {
+          "4": 198,
+          "3": 2
+        },
+        "7": {
+          "4": 171,
+          "3": 4,
+          "2": 24,
+          "1": 1
+        },
+        "2": {
+          "4": 198,
+          "3": 2
+        },
+        "5": {
+          "4": 198,
+          "3": 2
+        },
+        "3": {
+          "4": 197,
+          "3": 3
+        }
+      },
+      "distinct_bus_degree_histograms": 3,
+      "physical_cnot_layers": 4,
+      "physical_data_gate_conflicts": 0,
+      "maximum_simultaneous_data_cnots": 1600
+    },
+    {
+      "n": 16,
+      "ports": 4,
+      "required_distinct_physical_data_links": 25346,
+      "graph_file": "results/capacity_validation/connectivity_n16_q4.json",
+      "graph_sha256": "12ee3d7f651fc0c081e7abf5666c2db1d894c42b64b0e49f4f1a304d95d5c779",
+      "bus_endpoint_degree_histogram": {
+        "16": 1420,
+        "15": 122,
+        "14": 52,
+        "9": 2,
+        "12": 2,
+        "13": 2
+      },
+      "core_endpoint_degree_histogram": {
+        "4": 6204,
+        "2": 54,
+        "3": 140,
+        "1": 2
+      },
+      "per_bus_endpoint_degree_histograms": {
+        "8": {
+          "16": 98,
+          "14": 1,
+          "15": 1
+        },
+        "11": {
+          "16": 74,
+          "15": 25,
+          "13": 1
+        },
+        "6": {
+          "16": 98,
+          "15": 2
+        },
+        "7": {
+          "16": 98,
+          "15": 1,
+          "14": 1
+        },
+        "15": {
+          "16": 73,
+          "14": 24,
+          "15": 1,
+          "9": 1,
+          "12": 1
+        },
+        "13": {
+          "16": 98,
+          "15": 2
+        },
+        "10": {
+          "16": 73,
+          "15": 27
+        },
+        "3": {
+          "16": 98,
+          "15": 1,
+          "14": 1
+        },
+        "12": {
+          "16": 98,
+          "15": 1,
+          "14": 1
+        },
+        "2": {
+          "16": 98,
+          "15": 2
+        },
+        "9": {
+          "16": 98,
+          "15": 2
+        },
+        "0": {
+          "16": 73,
+          "14": 24,
+          "9": 1,
+          "12": 1,
+          "15": 1
+        },
+        "4": {
+          "15": 25,
+          "16": 74,
+          "13": 1
+        },
+        "1": {
+          "16": 98,
+          "15": 2
+        },
+        "14": {
+          "16": 98,
+          "15": 2
+        },
+        "5": {
+          "16": 73,
+          "15": 27
+        }
+      },
+      "distinct_bus_degree_histograms": 5,
+      "physical_cnot_layers": 16,
+      "physical_data_gate_conflicts": 0,
+      "maximum_simultaneous_data_cnots": 1600
+    },
+    {
+      "n": 16,
+      "ports": 6,
+      "required_distinct_physical_data_links": 25246,
+      "graph_file": "results/capacity_validation/connectivity_n16_q6.json",
+      "graph_sha256": "b37a07fc074b45bb2369ee6c6163db2551d4836299b2f6ae93e0f7770f6d17a1",
+      "bus_endpoint_degree_histogram": {
+        "8": 742,
+        "12": 1374,
+        "11": 172,
+        "7": 54,
+        "10": 48,
+        "9": 4,
+        "6": 6
+      },
+      "core_endpoint_degree_histogram": {
+        "4": 6104,
+        "3": 240,
+        "2": 54,
+        "1": 2
+      },
+      "per_bus_endpoint_degree_histograms": {
+        "6": {
+          "8": 50,
+          "12": 74,
+          "11": 25,
+          "9": 1
+        },
+        "8": {
+          "12": 97,
+          "8": 50,
+          "11": 3
+        },
+        "1": {
+          "8": 50,
+          "11": 28,
+          "12": 72
+        },
+        "7": {
+          "12": 97,
+          "8": 50,
+          "11": 3
+        },
+        "10": {
+          "12": 100,
+          "8": 24,
+          "7": 25,
+          "6": 1
+        },
+        "9": {
+          "8": 50,
+          "12": 74,
+          "11": 25,
+          "9": 1
+        },
+        "12": {
+          "12": 98,
+          "8": 50,
+          "11": 2
+        },
+        "4": {
+          "8": 48,
+          "12": 75,
+          "11": 25,
+          "7": 2
+        },
+        "14": {
+          "12": 72,
+          "8": 50,
+          "11": 28
+        },
+        "13": {
+          "12": 98,
+          "8": 50,
+          "11": 2
+        },
+        "2": {
+          "12": 98,
+          "8": 50,
+          "11": 2
+        },
+        "5": {
+          "7": 25,
+          "8": 24,
+          "12": 100,
+          "6": 1
+        },
+        "3": {
+          "8": 50,
+          "12": 98,
+          "11": 2
+        },
+        "11": {
+          "11": 25,
+          "12": 75,
+          "8": 48,
+          "7": 2
+        },
+        "15": {
+          "12": 73,
+          "8": 49,
+          "10": 24,
+          "6": 2,
+          "9": 1,
+          "11": 1
+        },
+        "0": {
+          "10": 24,
+          "12": 73,
+          "8": 49,
+          "9": 1,
+          "11": 1,
+          "6": 2
+        }
+      },
+      "distinct_bus_degree_histograms": 7,
+      "physical_cnot_layers": 12,
+      "physical_data_gate_conflicts": 0,
+      "maximum_simultaneous_data_cnots": 2400
+    },
+    {
+      "n": 16,
+      "ports": 8,
+      "required_distinct_physical_data_links": 25402,
+      "graph_file": "results/capacity_validation/connectivity_n16_q8.json",
+      "graph_sha256": "2b4fa92339471cb9a54e6f6fe3ba83717ab77641fee72e18618a9067ef9667c4",
+      "bus_endpoint_degree_histogram": {
+        "8": 3064,
+        "6": 56,
+        "4": 2,
+        "7": 78
+      },
+      "core_endpoint_degree_histogram": {
+        "4": 6256,
+        "2": 50,
+        "3": 92,
+        "1": 2
+      },
+      "per_bus_endpoint_degree_histograms": {
+        "8": {
+          "8": 198,
+          "6": 1,
+          "7": 1
+        },
+        "1": {
+          "8": 198,
+          "7": 2
+        },
+        "6": {
+          "8": 198,
+          "7": 2
+        },
+        "7": {
+          "8": 198,
+          "7": 1,
+          "6": 1
+        },
+        "10": {
+          "8": 173,
+          "7": 27
+        },
+        "9": {
+          "8": 198,
+          "7": 2
+        },
+        "2": {
+          "8": 198,
+          "7": 2
+        },
+        "12": {
+          "8": 198,
+          "7": 2
+        },
+        "11": {
+          "8": 198,
+          "7": 2
+        },
+        "0": {
+          "8": 171,
+          "6": 27,
+          "4": 1,
+          "7": 1
+        },
+        "4": {
+          "8": 198,
+          "7": 2
+        },
+        "13": {
+          "8": 198,
+          "7": 2
+        },
+        "5": {
+          "8": 173,
+          "7": 27
+        },
+        "15": {
+          "8": 171,
+          "6": 27,
+          "7": 1,
+          "4": 1
+        },
+        "3": {
+          "8": 198,
+          "7": 2
+        },
+        "14": {
+          "8": 198,
+          "7": 2
+        }
+      },
+      "distinct_bus_degree_histograms": 4,
+      "physical_cnot_layers": 8,
+      "physical_data_gate_conflicts": 0,
+      "maximum_simultaneous_data_cnots": 3200
+    }
+  ],
+  "hardware_source": {
+    "repository": "https://github.com/EQuS/HAL",
+    "commit": "6fa604d0e2d526fd782f2eeb4c0f2de9cbc3088f",
+    "supported_constraint_types": [
+      "routing clearance",
+      "coupler length",
+      "TSV/bump counts"
+    ],
+    "missing_for_HLP": [
+      "physical pitch and port terminal placement",
+      "control/frequency limits for concurrent gates",
+      "feasible static coupling network for reused buses"
+    ]
+  },
+  "conclusion": "Required connectivity extracted; hardware-constrained B1 instance remains uncalibrated",
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "<historical interpreter path omitted>",
+  "source_sha256": {
+    "hlp-dac\\src\\experiments\\capacity_validation\\__init__.py": "18aa1fe7295ecd6c3773d2bd9e6c18cbacca928e1791490436ca735e4c037826",
+    "hlp-dac\\src\\experiments\\capacity_validation\\allocation.py": "c459a2683ad16f45ce00e499b767895a53a8b48891328039ed5eab13a910574a",
+    "hlp-dac\\src\\experiments\\capacity_validation\\circuit.py": "9ea63d9e9fbad08a13d9b0b8b9bc62d327f5da76c0010b7ab11181563c65a09c",
+    "hlp-dac\\src\\experiments\\capacity_validation\\common.py": "d94ae6645c101931aad5856e09e0be0c7bde6f92185afad41256729367dd2fe0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\connectivity.py": "e4a8d1bc299d083fcd6abdae664d95e7fb111c89cadf4cc63d86338601a63664",
+    "hlp-dac\\src\\experiments\\capacity_validation\\geometry.py": "0f1332b5af60df4713e464c8844b2fa44f08ce14103b3e0e979a34a05e3a92c6",
+    "hlp-dac\\src\\experiments\\capacity_validation\\schedule.py": "708efc15ff650399316ee4e780fbf06b6bb925fe25561cbe14956590eced9cf0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\test_validation.py": "75247be1931b9d55a2aeaf7bfd85d85a8d41283426f3f9566fd798a55999ebe5",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\surface_code.py": "28e842ac60ca770b0d3548b79a239f57bdced08a7f6e4e7906206c95fcb874ee",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\lv1_codes.py": "ea639974bbf2696a6118146b7842d3a2c7f16e202af9bec3e4da6fcf3a33b92e",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\hierarchical_circuit.py": "8ea4aff4f7270afa85a5960365e7e8ac1d234ffb3d0e305c92cfa5aa05459064",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\high_level_utils.py": "dc07daa44c11e468891c2ec271d46ed797beea8b74254bf954c2e71c2a501598"
+  }
+}

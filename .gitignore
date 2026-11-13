@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+output/
+*.pending
+results/**/*.stim
+results/**/*.dem
+!results/**/*_abstract.stim
+results/**/*_dependency_batches.json

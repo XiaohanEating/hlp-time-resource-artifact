@@ -1,0 +1,182 @@
+{
+  "original_cross_layers": 16,
+  "new_cross_layers": 32,
+  "extra_cross_layers": 16,
+  "peak_cross_gates": 800,
+  "layers": [
+    {
+      "original_tick": 133,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 0
+    },
+    {
+      "original_tick": 246,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 1
+    },
+    {
+      "original_tick": 359,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 2
+    },
+    {
+      "original_tick": 472,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 3
+    },
+    {
+      "original_tick": 739,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 4
+    },
+    {
+      "original_tick": 852,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 5
+    },
+    {
+      "original_tick": 965,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 6
+    },
+    {
+      "original_tick": 1078,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 7
+    },
+    {
+      "original_tick": 1345,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 8
+    },
+    {
+      "original_tick": 1458,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 9
+    },
+    {
+      "original_tick": 1571,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 10
+    },
+    {
+      "original_tick": 1684,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 11
+    },
+    {
+      "original_tick": 1951,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 12
+    },
+    {
+      "original_tick": 2064,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 13
+    },
+    {
+      "original_tick": 2177,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 14
+    },
+    {
+      "original_tick": 2290,
+      "original_gate_count": 1600,
+      "sublayer_gate_counts": [
+        800,
+        800
+      ],
+      "added_layers_before": 15
+    }
+  ],
+  "ideal_operation_hash": "31e63bfee9b410945a10d9906235feac12fb6946d0b5cf28d110718481513402",
+  "operation_order_unchanged": true,
+  "measurement_records_and_detector_definitions_unchanged": true,
+  "n": 16,
+  "ports": 4,
+  "cap": 800,
+  "rounds": 1,
+  "source": "results/circuit_cache/squareberg_n16_pool16_alpha_1_d5_r1.stim",
+  "source_sha256": "1691517a741ff7c8fc0171b55fd9ca6ee521bff73656d9fea31e36bbe4f05b15",
+  "output": "results/concurrency_validation/n16_q4_cap800_r1_ideal.stim",
+  "output_sha256": "d556a6d2f813bb6f91071c67a2a44d0643a89f3b14e55def5bfd3e36b4c44a0d",
+  "noise": "omitted for ideal structural validation only",
+  "detectors": 839936,
+  "observables": 388,
+  "deterministic_detectors_and_observables": true,
+  "noiseless_shots": 32,
+  "noiseless_detection_events": 0,
+  "noiseless_observable_events": 0,
+  "protection": "SE round sequence and all measurement boundaries preserved; wall-clock windows gain extra gate layers",
+  "elapsed_seconds": 164.05768530000933,
+  "python": "<historical interpreter path omitted>",
+  "version": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "source_hashes": {
+    "hlp-dac\\src\\experiments\\concurrency_validation\\__init__.py": "e99aa3e03d862adb11797501d1d2d504d581bce253af0dafe90f2cc95072d7b2",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\common.py": "049fc9c9e296830e437e51efffa0d7f830e241c51c153b1c82e612f2410bfeb1",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\frontier.py": "e1437d6a50e0ee40a307a0956e066506d5b36a4920feb51824c7f5900f913c81",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\rebuild.py": "ff9a0804e7061b9052ac0399d9816e4ea677021976ba21c9a554e3fbbab25a18",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\test_frontier.py": "f58f9572b4b09eb8acb958d8a4be8bedfddd113254546fd84efbcb08a54f3fc4",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\figures.py": "a5535deb13ae7fb874192cd09e369b2de844f57460f6ae634166fa072da67fd3"
+  }
+}

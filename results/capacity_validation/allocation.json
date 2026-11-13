@@ -1,0 +1,1204 @@
+{
+  "scope": "Exact capacity-allocation lower model with arbitrary check-to-bus assignment.\n\nAll connections are available. Four check groups execute in sequence; within\neach group a bus may serially process several identical checks. Neither\nphysical routing nor circuit reliability is represented. Dynamic programming\ncertifies the optimum of this stated model, not unrestricted HLP scheduling.\n",
+  "results": [
+    {
+      "n": 8,
+      "allowed_ports": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "anchors": [
+        {
+          "bus_qubit_budget": 1592,
+          "total_qubit_budget": 4728,
+          "joint_cycle_rounds": 68,
+          "uniform_cycle_rounds": 68,
+          "joint_allocation": {
+            "4": 8
+          },
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "bus_qubit_budget": 3184,
+          "total_qubit_budget": 6320,
+          "joint_cycle_rounds": 68,
+          "uniform_cycle_rounds": 68,
+          "joint_allocation": {
+            "4": 8
+          },
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "bus_qubit_budget": 3192,
+          "total_qubit_budget": 6328,
+          "joint_cycle_rounds": 48,
+          "uniform_cycle_rounds": 48,
+          "joint_allocation": {
+            "8": 8
+          },
+          "uniform_ports": 8,
+          "uniform_bus_count": 8
+        }
+      ],
+      "original_to_eight_port_budget_breakpoints": [
+        1592,
+        3192
+      ],
+      "strict_advantages_at_those_breakpoints": [],
+      "full_deadline_cost_table": [
+        {
+          "group_deadline": 12,
+          "joint_min_bus_qubits": 3192,
+          "joint_ports": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "uniform_min_bus_qubits": 3192,
+          "uniform_ports": 8,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 17,
+          "joint_min_bus_qubits": 1592,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1592,
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 24,
+          "joint_min_bus_qubits": 1592,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1592,
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 34,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 36,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 48,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 51,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 60,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 68,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 72,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 84,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 85,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 96,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 102,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 119,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 136,
+          "joint_min_bus_qubits": 199,
+          "joint_ports": [
+            4
+          ],
+          "uniform_min_bus_qubits": 199,
+          "uniform_ports": 4,
+          "uniform_bus_count": 1
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "allowed_ports": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "anchors": [
+        {
+          "bus_qubit_budget": 3184,
+          "total_qubit_budget": 15728,
+          "joint_cycle_rounds": 108,
+          "uniform_cycle_rounds": 108,
+          "joint_allocation": {
+            "4": 16
+          },
+          "uniform_ports": 4,
+          "uniform_bus_count": 16
+        },
+        {
+          "bus_qubit_budget": 6368,
+          "total_qubit_budget": 18912,
+          "joint_cycle_rounds": 88,
+          "uniform_cycle_rounds": 88,
+          "joint_allocation": {
+            "6": 16
+          },
+          "uniform_ports": 6,
+          "uniform_bus_count": 16
+        },
+        {
+          "bus_qubit_budget": 6384,
+          "total_qubit_budget": 18928,
+          "joint_cycle_rounds": 68,
+          "uniform_cycle_rounds": 68,
+          "joint_allocation": {
+            "8": 16
+          },
+          "uniform_ports": 8,
+          "uniform_bus_count": 16
+        }
+      ],
+      "original_to_eight_port_budget_breakpoints": [
+        3184,
+        4784,
+        6384
+      ],
+      "strict_advantages_at_those_breakpoints": [],
+      "full_deadline_cost_table": [
+        {
+          "group_deadline": 12,
+          "joint_min_bus_qubits": 12784,
+          "joint_ports": [
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "uniform_min_bus_qubits": 12784,
+          "uniform_ports": 16,
+          "uniform_bus_count": 16
+        },
+        {
+          "group_deadline": 17,
+          "joint_min_bus_qubits": 6384,
+          "joint_ports": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "uniform_min_bus_qubits": 6384,
+          "uniform_ports": 8,
+          "uniform_bus_count": 16
+        },
+        {
+          "group_deadline": 22,
+          "joint_min_bus_qubits": 4784,
+          "joint_ports": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "uniform_min_bus_qubits": 4784,
+          "uniform_ports": 6,
+          "uniform_bus_count": 16
+        },
+        {
+          "group_deadline": 24,
+          "joint_min_bus_qubits": 4784,
+          "joint_ports": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "uniform_min_bus_qubits": 4784,
+          "uniform_ports": 6,
+          "uniform_bus_count": 16
+        },
+        {
+          "group_deadline": 27,
+          "joint_min_bus_qubits": 3184,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 3184,
+          "uniform_ports": 4,
+          "uniform_bus_count": 16
+        },
+        {
+          "group_deadline": 34,
+          "joint_min_bus_qubits": 3184,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 3184,
+          "uniform_ports": 4,
+          "uniform_bus_count": 16
+        },
+        {
+          "group_deadline": 36,
+          "joint_min_bus_qubits": 3184,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 3184,
+          "uniform_ports": 4,
+          "uniform_bus_count": 16
+        },
+        {
+          "group_deadline": 44,
+          "joint_min_bus_qubits": 2392,
+          "joint_ports": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "uniform_min_bus_qubits": 2392,
+          "uniform_ports": 6,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 48,
+          "joint_min_bus_qubits": 2392,
+          "joint_ports": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "uniform_min_bus_qubits": 2392,
+          "uniform_ports": 6,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 51,
+          "joint_min_bus_qubits": 2194,
+          "joint_ports": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            4
+          ],
+          "uniform_min_bus_qubits": 2392,
+          "uniform_ports": 6,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 54,
+          "joint_min_bus_qubits": 1592,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1592,
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 60,
+          "joint_min_bus_qubits": 1592,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1592,
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 66,
+          "joint_min_bus_qubits": 1592,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1592,
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 68,
+          "joint_min_bus_qubits": 1592,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1592,
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 72,
+          "joint_min_bus_qubits": 1592,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1592,
+          "uniform_ports": 4,
+          "uniform_bus_count": 8
+        },
+        {
+          "group_deadline": 81,
+          "joint_min_bus_qubits": 1194,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1194,
+          "uniform_ports": 4,
+          "uniform_bus_count": 6
+        },
+        {
+          "group_deadline": 84,
+          "joint_min_bus_qubits": 1194,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1194,
+          "uniform_ports": 4,
+          "uniform_bus_count": 6
+        },
+        {
+          "group_deadline": 85,
+          "joint_min_bus_qubits": 1194,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1194,
+          "uniform_ports": 4,
+          "uniform_bus_count": 6
+        },
+        {
+          "group_deadline": 88,
+          "joint_min_bus_qubits": 1095,
+          "joint_ports": [
+            6,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1194,
+          "uniform_ports": 4,
+          "uniform_bus_count": 6
+        },
+        {
+          "group_deadline": 96,
+          "joint_min_bus_qubits": 1095,
+          "joint_ports": [
+            6,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1194,
+          "uniform_ports": 4,
+          "uniform_bus_count": 6
+        },
+        {
+          "group_deadline": 102,
+          "joint_min_bus_qubits": 1095,
+          "joint_ports": [
+            6,
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 1194,
+          "uniform_ports": 4,
+          "uniform_bus_count": 6
+        },
+        {
+          "group_deadline": 108,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 110,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 119,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 120,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 132,
+          "joint_min_bus_qubits": 796,
+          "joint_ports": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 135,
+          "joint_min_bus_qubits": 697,
+          "joint_ports": [
+            6,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 136,
+          "joint_min_bus_qubits": 697,
+          "joint_ports": [
+            6,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 144,
+          "joint_min_bus_qubits": 697,
+          "joint_ports": [
+            6,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 153,
+          "joint_min_bus_qubits": 697,
+          "joint_ports": [
+            6,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 154,
+          "joint_min_bus_qubits": 697,
+          "joint_ports": [
+            6,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 156,
+          "joint_min_bus_qubits": 697,
+          "joint_ports": [
+            6,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 796,
+          "uniform_ports": 4,
+          "uniform_bus_count": 4
+        },
+        {
+          "group_deadline": 162,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 168,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 170,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 176,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 180,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 187,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 189,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 192,
+          "joint_min_bus_qubits": 597,
+          "joint_ports": [
+            4,
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 198,
+          "joint_min_bus_qubits": 498,
+          "joint_ports": [
+            6,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 204,
+          "joint_min_bus_qubits": 498,
+          "joint_ports": [
+            6,
+            4
+          ],
+          "uniform_min_bus_qubits": 597,
+          "uniform_ports": 4,
+          "uniform_bus_count": 3
+        },
+        {
+          "group_deadline": 216,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 220,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 221,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 238,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 242,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 243,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 255,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 264,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 270,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 272,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 286,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 297,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 308,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 324,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 330,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 351,
+          "joint_min_bus_qubits": 398,
+          "joint_ports": [
+            4,
+            4
+          ],
+          "uniform_min_bus_qubits": 398,
+          "uniform_ports": 4,
+          "uniform_bus_count": 2
+        },
+        {
+          "group_deadline": 352,
+          "joint_min_bus_qubits": 299,
+          "joint_ports": [
+            6
+          ],
+          "uniform_min_bus_qubits": 299,
+          "uniform_ports": 6,
+          "uniform_bus_count": 1
+        },
+        {
+          "group_deadline": 378,
+          "joint_min_bus_qubits": 299,
+          "joint_ports": [
+            6
+          ],
+          "uniform_min_bus_qubits": 299,
+          "uniform_ports": 6,
+          "uniform_bus_count": 1
+        },
+        {
+          "group_deadline": 405,
+          "joint_min_bus_qubits": 299,
+          "joint_ports": [
+            6
+          ],
+          "uniform_min_bus_qubits": 299,
+          "uniform_ports": 6,
+          "uniform_bus_count": 1
+        },
+        {
+          "group_deadline": 432,
+          "joint_min_bus_qubits": 199,
+          "joint_ports": [
+            4
+          ],
+          "uniform_min_bus_qubits": 199,
+          "uniform_ports": 4,
+          "uniform_bus_count": 1
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 0.0028523000073619187,
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "<historical interpreter path omitted>",
+  "source_sha256": {
+    "hlp-dac\\src\\experiments\\capacity_validation\\__init__.py": "18aa1fe7295ecd6c3773d2bd9e6c18cbacca928e1791490436ca735e4c037826",
+    "hlp-dac\\src\\experiments\\capacity_validation\\allocation.py": "86daee94c8e76fb3752e2be103c1f127199de7ee4c06b54418b595e67a8588e0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\circuit.py": "a961cff11bb6273a51a672bc25d6e82c17a978e7f73fd82520125c8166a3c199",
+    "hlp-dac\\src\\experiments\\capacity_validation\\common.py": "d2ad334c2d38e870197b01b084e0070c9caddee56751b671ec1312489c3defd7",
+    "hlp-dac\\src\\experiments\\capacity_validation\\connectivity.py": "e4a8d1bc299d083fcd6abdae664d95e7fb111c89cadf4cc63d86338601a63664",
+    "hlp-dac\\src\\experiments\\capacity_validation\\geometry.py": "0f1332b5af60df4713e464c8844b2fa44f08ce14103b3e0e979a34a05e3a92c6",
+    "hlp-dac\\src\\experiments\\capacity_validation\\schedule.py": "708efc15ff650399316ee4e780fbf06b6bb925fe25561cbe14956590eced9cf0",
+    "hlp-dac\\src\\experiments\\capacity_validation\\test_validation.py": "75247be1931b9d55a2aeaf7bfd85d85a8d41283426f3f9566fd798a55999ebe5",
+    "hlp-dac\\src\\experiments\\capacity_validation\\timing.py": "c3671ff6e3288ca5784966930d552230d1862842fa9519b84c9ef59be9d188f1",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\surface_code.py": "28e842ac60ca770b0d3548b79a239f57bdced08a7f6e4e7906206c95fcb874ee",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\lv1_codes.py": "ea639974bbf2696a6118146b7842d3a2c7f16e202af9bec3e4da6fcf3a33b92e",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\hierarchical_circuit.py": "8ea4aff4f7270afa85a5960365e7e8ac1d234ffb3d0e305c92cfa5aa05459064",
+    "hlp-repro\\ShuttlebusMemory\\src\\circuit\\high_level_utils.py": "dc07daa44c11e468891c2ec271d46ed797beea8b74254bf954c2e71c2a501598"
+  }
+}

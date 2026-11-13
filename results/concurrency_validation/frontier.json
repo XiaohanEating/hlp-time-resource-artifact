@@ -1,0 +1,8673 @@
+{
+  "scope": "Exact scheduling under retained SE barriers and 25-gate atomic port bundles.\n\nAll requested gates within a batch use disjoint physical data qubits. Splitting\na batch into ceil(gates/C) serial sublayers is feasible and attains its workload\nlower bound when C is a multiple of d**2. No operation crosses an SE barrier.\nThis is not an optimality claim for asynchronous or differently routed HLP.\n",
+  "n": 16,
+  "d0": 5,
+  "total_qubit_budget": 18928,
+  "port_domain": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "bus_domain": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "time_model": "T = R*t_SE + L*t_CX; boundary rounds assumed same duration as SE for normalized illustrations",
+  "caps": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150,
+    175,
+    200,
+    225,
+    250,
+    275,
+    300,
+    325,
+    350,
+    375,
+    400,
+    425,
+    450,
+    475,
+    500,
+    525,
+    550,
+    575,
+    600,
+    625,
+    650,
+    675,
+    700,
+    725,
+    750,
+    775,
+    800,
+    825,
+    850,
+    875,
+    900,
+    925,
+    950,
+    975,
+    1000,
+    1025,
+    1050,
+    1075,
+    1100,
+    1125,
+    1150,
+    1175,
+    1200,
+    1225,
+    1250,
+    1275,
+    1300,
+    1325,
+    1350,
+    1375,
+    1400,
+    1425,
+    1450,
+    1475,
+    1500,
+    1525,
+    1550,
+    1575,
+    1600,
+    1625,
+    1650,
+    1675,
+    1700,
+    1725,
+    1750,
+    1775,
+    1800,
+    1825,
+    1850,
+    1875,
+    1900,
+    1925,
+    1950,
+    1975,
+    2000,
+    2025,
+    2050,
+    2075,
+    2100,
+    2125,
+    2150,
+    2175,
+    2200,
+    2225,
+    2250,
+    2275,
+    2300,
+    2325,
+    2350,
+    2375,
+    2400,
+    2425,
+    2450,
+    2475,
+    2500,
+    2525,
+    2550,
+    2575,
+    2600,
+    2625,
+    2650,
+    2675,
+    2700,
+    2725,
+    2750,
+    2775,
+    2800,
+    2825,
+    2850,
+    2875,
+    2900,
+    2925,
+    2950,
+    2975,
+    3000,
+    3025,
+    3050,
+    3075,
+    3100,
+    3125,
+    3150,
+    3175,
+    3200,
+    3225,
+    3250,
+    3275,
+    3300,
+    3325,
+    3350,
+    3375,
+    3400,
+    3425,
+    3450,
+    3475,
+    3500,
+    3525,
+    3550,
+    3575,
+    3600,
+    3625,
+    3650,
+    3675,
+    3700,
+    3725,
+    3750,
+    3775,
+    3800,
+    3825,
+    3850,
+    3875,
+    3900,
+    3925,
+    3950,
+    3975,
+    4000,
+    4025,
+    4050,
+    4075,
+    4100,
+    4125,
+    4150,
+    4175,
+    4200,
+    4225,
+    4250,
+    4275,
+    4300,
+    4325,
+    4350,
+    4375,
+    4400,
+    4425,
+    4450,
+    4475,
+    4500,
+    4525,
+    4550,
+    4575,
+    4600,
+    4625,
+    4650,
+    4675,
+    4700,
+    4725,
+    4750,
+    4775,
+    4800,
+    4825,
+    4850,
+    4875,
+    4900,
+    4925,
+    4950,
+    4975,
+    5000,
+    5025,
+    5050,
+    5075,
+    5100,
+    5125,
+    5150,
+    5175,
+    5200,
+    5225,
+    5250,
+    5275,
+    5300,
+    5325,
+    5350,
+    5375,
+    5400,
+    5425,
+    5450,
+    5475,
+    5500,
+    5525,
+    5550,
+    5575,
+    5600,
+    5625,
+    5650,
+    5675,
+    5700,
+    5725,
+    5750,
+    5775,
+    5800,
+    5825,
+    5850,
+    5875,
+    5900,
+    5925,
+    5950,
+    5975,
+    6000,
+    6025,
+    6050,
+    6075,
+    6100,
+    6125,
+    6150,
+    6175,
+    6200,
+    6225,
+    6250,
+    6275,
+    6300,
+    6325,
+    6350,
+    6375,
+    6400
+  ],
+  "summary": [
+    {
+      "n": 16,
+      "ports": 4,
+      "cap": 800,
+      "se_rounds": 108,
+      "cross_gate_layers": 32,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 4,
+      "cap": 1600,
+      "se_rounds": 108,
+      "cross_gate_layers": 16,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 4,
+      "cap": 2400,
+      "se_rounds": 108,
+      "cross_gate_layers": 16,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 4,
+      "cap": 3200,
+      "se_rounds": 108,
+      "cross_gate_layers": 16,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 4,
+      "cap": 6400,
+      "se_rounds": 108,
+      "cross_gate_layers": 16,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 6,
+      "cap": 800,
+      "se_rounds": 88,
+      "cross_gate_layers": 32,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 6,
+      "cap": 1600,
+      "se_rounds": 88,
+      "cross_gate_layers": 20,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 6,
+      "cap": 2400,
+      "se_rounds": 88,
+      "cross_gate_layers": 12,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 6,
+      "cap": 3200,
+      "se_rounds": 88,
+      "cross_gate_layers": 12,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 6,
+      "cap": 6400,
+      "se_rounds": 88,
+      "cross_gate_layers": 12,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 8,
+      "cap": 800,
+      "se_rounds": 68,
+      "cross_gate_layers": 32,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 8,
+      "cap": 1600,
+      "se_rounds": 68,
+      "cross_gate_layers": 16,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 8,
+      "cap": 2400,
+      "se_rounds": 68,
+      "cross_gate_layers": 16,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 8,
+      "cap": 3200,
+      "se_rounds": 68,
+      "cross_gate_layers": 8,
+      "lower_bound_attained": true
+    },
+    {
+      "n": 16,
+      "ports": 8,
+      "cap": 6400,
+      "se_rounds": 68,
+      "cross_gate_layers": 8,
+      "lower_bound_attained": true
+    }
+  ],
+  "points": [
+    {
+      "cap": 25,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 1024
+    },
+    {
+      "cap": 25,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 1024
+    },
+    {
+      "cap": 25,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 1024
+    },
+    {
+      "cap": 50,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 512
+    },
+    {
+      "cap": 50,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 512
+    },
+    {
+      "cap": 50,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 512
+    },
+    {
+      "cap": 75,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 352
+    },
+    {
+      "cap": 75,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 344
+    },
+    {
+      "cap": 75,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 344
+    },
+    {
+      "cap": 100,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 256
+    },
+    {
+      "cap": 100,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 256
+    },
+    {
+      "cap": 100,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 256
+    },
+    {
+      "cap": 125,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 208
+    },
+    {
+      "cap": 125,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 212
+    },
+    {
+      "cap": 125,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 208
+    },
+    {
+      "cap": 150,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 176
+    },
+    {
+      "cap": 150,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 172
+    },
+    {
+      "cap": 150,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 176
+    },
+    {
+      "cap": 175,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 160
+    },
+    {
+      "cap": 175,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 152
+    },
+    {
+      "cap": 175,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 152
+    },
+    {
+      "cap": 200,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 128
+    },
+    {
+      "cap": 200,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 128
+    },
+    {
+      "cap": 200,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 128
+    },
+    {
+      "cap": 225,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 128
+    },
+    {
+      "cap": 225,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 120
+    },
+    {
+      "cap": 225,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 120
+    },
+    {
+      "cap": 250,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 112
+    },
+    {
+      "cap": 250,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 108
+    },
+    {
+      "cap": 250,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 104
+    },
+    {
+      "cap": 275,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 96
+    },
+    {
+      "cap": 275,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 96
+    },
+    {
+      "cap": 275,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 96
+    },
+    {
+      "cap": 300,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 96
+    },
+    {
+      "cap": 300,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 88
+    },
+    {
+      "cap": 300,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 88
+    },
+    {
+      "cap": 325,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 80
+    },
+    {
+      "cap": 325,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 84
+    },
+    {
+      "cap": 325,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 80
+    },
+    {
+      "cap": 350,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 80
+    },
+    {
+      "cap": 350,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 76
+    },
+    {
+      "cap": 350,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 80
+    },
+    {
+      "cap": 375,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 80
+    },
+    {
+      "cap": 375,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 76
+    },
+    {
+      "cap": 375,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 72
+    },
+    {
+      "cap": 400,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 400,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 400,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 425,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 425,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 425,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 450,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 450,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 450,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 475,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 475,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 475,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 56
+    },
+    {
+      "cap": 500,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 500,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 56
+    },
+    {
+      "cap": 500,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 56
+    },
+    {
+      "cap": 525,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 64
+    },
+    {
+      "cap": 525,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 56
+    },
+    {
+      "cap": 525,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 56
+    },
+    {
+      "cap": 550,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 550,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 52
+    },
+    {
+      "cap": 550,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 575,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 575,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 52
+    },
+    {
+      "cap": 575,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 600,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 600,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 600,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 625,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 625,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 625,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 650,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 650,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 650,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 40
+    },
+    {
+      "cap": 675,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 675,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 675,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 40
+    },
+    {
+      "cap": 700,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 700,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 700,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 40
+    },
+    {
+      "cap": 725,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 725,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 725,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 40
+    },
+    {
+      "cap": 750,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 750,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 750,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 40
+    },
+    {
+      "cap": 775,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 48
+    },
+    {
+      "cap": 775,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 44
+    },
+    {
+      "cap": 775,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 40
+    },
+    {
+      "cap": 800,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 800,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 800,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 825,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 825,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 825,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 850,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 850,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 850,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 875,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 875,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 875,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 900,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 900,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 900,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 925,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 925,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 925,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 950,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 950,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 950,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 975,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 975,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 975,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1000,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1000,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1000,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1025,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1025,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1025,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1050,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1050,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1050,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1075,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1075,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1075,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1100,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1100,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1100,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1125,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1125,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1125,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1150,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1150,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1150,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1175,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1175,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1175,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1200,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1200,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1200,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1225,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1225,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1225,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1250,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1250,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1250,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1275,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1275,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1275,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1300,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1300,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1300,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1325,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1325,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1325,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1350,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1350,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1350,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1375,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1375,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1375,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1400,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1400,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1400,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1425,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1425,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1425,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1450,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1450,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1450,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1475,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1475,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1475,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1500,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1500,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1500,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1525,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1525,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1525,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1550,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1550,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1550,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1575,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 32
+    },
+    {
+      "cap": 1575,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1575,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 24
+    },
+    {
+      "cap": 1600,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1600,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1600,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1625,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1625,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1625,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1650,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1650,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1650,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1675,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1675,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1675,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1700,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1700,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1700,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1725,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1725,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1725,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1750,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1750,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1750,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1775,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1775,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1775,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1800,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1800,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1800,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1825,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1825,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1825,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1850,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1850,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1850,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1875,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1875,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1875,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1900,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1900,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1900,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1925,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1925,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1925,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1950,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1950,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1950,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1975,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 1975,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 1975,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2000,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2000,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2000,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2025,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2025,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2025,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2050,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2050,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2050,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2075,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2075,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2075,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2100,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2100,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2100,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2125,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2125,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2125,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2150,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2150,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2150,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2175,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2175,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2175,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2200,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2200,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2200,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2225,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2225,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2225,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2250,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2250,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2250,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2275,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2275,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2275,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2300,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2300,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2300,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2325,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2325,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2325,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2350,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2350,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2350,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2375,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2375,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 20
+    },
+    {
+      "cap": 2375,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2400,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2400,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2400,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2425,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2425,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2425,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2450,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2450,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2450,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2475,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2475,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2475,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2500,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2500,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2500,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2525,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2525,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2525,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2550,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2550,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2550,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2575,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2575,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2575,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2600,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2600,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2600,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2625,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2625,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2625,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2650,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2650,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2650,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2675,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2675,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2675,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2700,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2700,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2700,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2725,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2725,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2725,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2750,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2750,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2750,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2775,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2775,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2775,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2800,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2800,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2800,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2825,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2825,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2825,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2850,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2850,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2850,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2875,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2875,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2875,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2900,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2900,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2900,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2925,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2925,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2925,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2950,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2950,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2950,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2975,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 2975,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 2975,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3000,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3000,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3000,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3025,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3025,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3025,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3050,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3050,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3050,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3075,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3075,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3075,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3100,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3100,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3100,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3125,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3125,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3125,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3150,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3150,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3150,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3175,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3175,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3175,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3200,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3200,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3200,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3225,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3225,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3225,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3250,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3250,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3250,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3275,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3275,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3275,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3300,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3300,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3300,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3325,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3325,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3325,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3350,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3350,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3350,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3375,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3375,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3375,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3400,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3400,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3400,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3425,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3425,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3425,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3450,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3450,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3450,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3475,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3475,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3475,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3500,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3500,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3500,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3525,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3525,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3525,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3550,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3550,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3550,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3575,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3575,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3575,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3600,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3600,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3600,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3625,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3625,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3625,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3650,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3650,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3650,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3675,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3675,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3675,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3700,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3700,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3700,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3725,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3725,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3725,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3750,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3750,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3750,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3775,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3775,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3775,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3800,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3800,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3800,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3825,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3825,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3825,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3850,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3850,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3850,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3875,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3875,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3875,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3900,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3900,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3900,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3925,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3925,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3925,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3950,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3950,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3950,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 3975,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 3975,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 3975,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4000,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4000,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4000,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4025,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4025,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4025,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4050,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4050,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4050,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4075,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4075,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4075,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4100,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4100,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4100,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4125,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4125,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4125,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4150,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4150,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4150,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4175,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4175,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4175,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4200,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4200,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4200,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4225,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4225,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4225,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4250,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4250,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4250,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4275,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4275,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4275,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4300,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4300,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4300,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4325,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4325,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4325,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4350,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4350,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4350,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4375,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4375,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4375,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4400,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4400,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4400,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4425,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4425,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4425,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4450,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4450,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4450,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4475,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4475,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4475,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4500,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4500,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4500,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4525,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4525,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4525,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4550,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4550,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4550,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4575,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4575,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4575,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4600,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4600,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4600,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4625,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4625,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4625,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4650,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4650,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4650,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4675,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4675,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4675,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4700,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4700,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4700,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4725,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4725,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4725,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4750,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4750,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4750,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4775,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4775,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4775,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4800,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4800,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4800,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4825,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4825,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4825,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4850,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4850,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4850,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4875,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4875,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4875,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4900,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4900,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4900,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4925,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4925,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4925,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4950,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4950,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4950,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 4975,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 4975,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 4975,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5000,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5000,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5000,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5025,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5025,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5025,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5050,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5050,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5050,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5075,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5075,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5075,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5100,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5100,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5100,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5125,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5125,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5125,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5150,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5150,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5150,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5175,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5175,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5175,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5200,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5200,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5200,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5225,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5225,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5225,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5250,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5250,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5250,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5275,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5275,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5275,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5300,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5300,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5300,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5325,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5325,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5325,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5350,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5350,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5350,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5375,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5375,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5375,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5400,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5400,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5400,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5425,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5425,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5425,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5450,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5450,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5450,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5475,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5475,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5475,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5500,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5500,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5500,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5525,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5525,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5525,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5550,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5550,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5550,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5575,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5575,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5575,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5600,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5600,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5600,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5625,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5625,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5625,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5650,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5650,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5650,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5675,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5675,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5675,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5700,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5700,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5700,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5725,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5725,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5725,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5750,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5750,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5750,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5775,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5775,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5775,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5800,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5800,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5800,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5825,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5825,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5825,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5850,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5850,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5850,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5875,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5875,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5875,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5900,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5900,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5900,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5925,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5925,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5925,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5950,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5950,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5950,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 5975,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 5975,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 5975,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6000,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6000,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6000,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6025,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6025,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6025,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6050,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6050,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6050,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6075,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6075,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6075,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6100,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6100,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6100,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6125,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6125,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6125,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6150,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6150,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6150,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6175,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6175,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6175,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6200,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6200,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6200,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6225,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6225,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6225,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6250,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6250,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6250,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6275,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6275,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6275,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6300,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6300,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6300,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6325,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6325,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6325,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6350,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6350,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6350,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6375,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6375,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6375,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    },
+    {
+      "cap": 6400,
+      "ports": 4,
+      "se_rounds": 108,
+      "cross_gate_layers": 16
+    },
+    {
+      "cap": 6400,
+      "ports": 6,
+      "se_rounds": 88,
+      "cross_gate_layers": 12
+    },
+    {
+      "cap": 6400,
+      "ports": 8,
+      "se_rounds": 68,
+      "cross_gate_layers": 8
+    }
+  ],
+  "optimal_uniform": [
+    {
+      "cap": 25,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 1024
+        }
+      ]
+    },
+    {
+      "cap": 50,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 512
+        }
+      ]
+    },
+    {
+      "cap": 75,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 344
+        }
+      ]
+    },
+    {
+      "cap": 100,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 256
+        }
+      ]
+    },
+    {
+      "cap": 125,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 208
+        }
+      ]
+    },
+    {
+      "cap": 150,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 172
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 176
+        }
+      ]
+    },
+    {
+      "cap": 175,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 148
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 152
+        }
+      ]
+    },
+    {
+      "cap": 200,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 128
+        }
+      ]
+    },
+    {
+      "cap": 225,
+      "pareto": [
+        {
+          "ports": 5,
+          "buses": 16,
+          "qubits": 16528,
+          "se_rounds": 108,
+          "cross_gate_layers": 116
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 120
+        }
+      ]
+    },
+    {
+      "cap": 250,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 104
+        }
+      ]
+    },
+    {
+      "cap": 275,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 96
+        }
+      ]
+    },
+    {
+      "cap": 300,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 88
+        }
+      ]
+    },
+    {
+      "cap": 325,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 80
+        }
+      ]
+    },
+    {
+      "cap": 350,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 76
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 76
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 80
+        }
+      ]
+    },
+    {
+      "cap": 375,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 72
+        }
+      ]
+    },
+    {
+      "cap": 400,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 64
+        }
+      ]
+    },
+    {
+      "cap": 425,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 64
+        }
+      ]
+    },
+    {
+      "cap": 450,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 64
+        },
+        {
+          "ports": 9,
+          "buses": 10,
+          "qubits": 17034,
+          "se_rounds": 136,
+          "cross_gate_layers": 60
+        },
+        {
+          "ports": 9,
+          "buses": 12,
+          "qubits": 17932,
+          "se_rounds": 136,
+          "cross_gate_layers": 60
+        },
+        {
+          "ports": 9,
+          "buses": 14,
+          "qubits": 18830,
+          "se_rounds": 136,
+          "cross_gate_layers": 60
+        },
+        {
+          "ports": 10,
+          "buses": 9,
+          "qubits": 17035,
+          "se_rounds": 136,
+          "cross_gate_layers": 60
+        },
+        {
+          "ports": 12,
+          "buses": 9,
+          "qubits": 17935,
+          "se_rounds": 136,
+          "cross_gate_layers": 60
+        },
+        {
+          "ports": 14,
+          "buses": 9,
+          "qubits": 18835,
+          "se_rounds": 136,
+          "cross_gate_layers": 60
+        }
+      ]
+    },
+    {
+      "cap": 475,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 56
+        }
+      ]
+    },
+    {
+      "cap": 500,
+      "pareto": [
+        {
+          "ports": 5,
+          "buses": 16,
+          "qubits": 16528,
+          "se_rounds": 108,
+          "cross_gate_layers": 52
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 56
+        }
+      ]
+    },
+    {
+      "cap": 525,
+      "pareto": [
+        {
+          "ports": 5,
+          "buses": 16,
+          "qubits": 16528,
+          "se_rounds": 108,
+          "cross_gate_layers": 52
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 56
+        }
+      ]
+    },
+    {
+      "cap": 550,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 48
+        }
+      ]
+    },
+    {
+      "cap": 575,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 48
+        }
+      ]
+    },
+    {
+      "cap": 600,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 44
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 48
+        }
+      ]
+    },
+    {
+      "cap": 625,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 44
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 48
+        }
+      ]
+    },
+    {
+      "cap": 650,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 40
+        }
+      ]
+    },
+    {
+      "cap": 675,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 40
+        }
+      ]
+    },
+    {
+      "cap": 700,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 40
+        }
+      ]
+    },
+    {
+      "cap": 725,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 40
+        }
+      ]
+    },
+    {
+      "cap": 750,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 40
+        }
+      ]
+    },
+    {
+      "cap": 775,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 40
+        },
+        {
+          "ports": 9,
+          "buses": 13,
+          "qubits": 18381,
+          "se_rounds": 136,
+          "cross_gate_layers": 36
+        },
+        {
+          "ports": 11,
+          "buses": 11,
+          "qubits": 18583,
+          "se_rounds": 136,
+          "cross_gate_layers": 36
+        },
+        {
+          "ports": 13,
+          "buses": 9,
+          "qubits": 18385,
+          "se_rounds": 136,
+          "cross_gate_layers": 36
+        }
+      ]
+    },
+    {
+      "cap": 800,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 825,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 850,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 875,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 900,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 925,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 950,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 28
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 975,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 28
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 1000,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 28
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 1025,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 28
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 1050,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 28
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 32
+        }
+      ]
+    },
+    {
+      "cap": 1075,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1100,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1125,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1150,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1175,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1200,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1225,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1250,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1275,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1300,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1325,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1350,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1375,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1400,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1425,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1450,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1475,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1500,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1525,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1550,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1575,
+      "pareto": [
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 20
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 24
+        }
+      ]
+    },
+    {
+      "cap": 1600,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1625,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1650,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1675,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1700,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1725,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1750,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1775,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1800,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1825,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1850,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1875,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1900,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1925,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1950,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 1975,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2000,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2025,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2050,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2075,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2100,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2125,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2150,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2175,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2200,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2225,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2250,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2275,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2300,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2325,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2350,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2375,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2400,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2425,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2450,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2475,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2500,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2525,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2550,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2575,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2600,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2625,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2650,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2675,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2700,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2725,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2750,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2775,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2800,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2825,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2850,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2875,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2900,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2925,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2950,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 2975,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3000,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3025,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3050,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3075,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3100,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3125,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3150,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3175,
+      "pareto": [
+        {
+          "ports": 6,
+          "buses": 16,
+          "qubits": 17328,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 7,
+          "buses": 16,
+          "qubits": 18128,
+          "se_rounds": 88,
+          "cross_gate_layers": 12
+        },
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 16
+        }
+      ]
+    },
+    {
+      "cap": 3200,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3225,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3250,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3275,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3300,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3325,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3350,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3375,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3400,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3425,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3450,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3475,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3500,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3525,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3550,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3575,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3600,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3625,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3650,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3675,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3700,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3725,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3750,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3775,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3800,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3825,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3850,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3875,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3900,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3925,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3950,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 3975,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4000,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4025,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4050,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4075,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4100,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4125,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4150,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4175,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4200,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4225,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4250,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4275,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4300,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4325,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4350,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4375,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4400,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4425,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4450,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4475,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4500,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4525,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4550,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4575,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4600,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4625,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4650,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4675,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4700,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4725,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4750,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4775,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4800,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4825,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4850,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4875,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4900,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4925,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4950,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 4975,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5000,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5025,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5050,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5075,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5100,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5125,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5150,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5175,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5200,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5225,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5250,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5275,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5300,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5325,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5350,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5375,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5400,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5425,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5450,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5475,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5500,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5525,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5550,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5575,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5600,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5625,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5650,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5675,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5700,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5725,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5750,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5775,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5800,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5825,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5850,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5875,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5900,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5925,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5950,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 5975,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6000,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6025,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6050,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6075,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6100,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6125,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6150,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6175,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6200,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6225,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6250,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6275,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6300,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6325,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6350,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6375,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    },
+    {
+      "cap": 6400,
+      "pareto": [
+        {
+          "ports": 8,
+          "buses": 16,
+          "qubits": 18928,
+          "se_rounds": 68,
+          "cross_gate_layers": 8
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    "Physical connectivity and control overhead uncalibrated",
+    "No SE/cross-gate overlap or cross-group reordering allowed",
+    "Groups can be split into waves with complete reset/SE/readout per wave",
+    "Optimum over uniform configurations in this legal family only",
+    "Five SE rounds retained; physical wait windows increase by inserted gate durations"
+  ],
+  "elapsed_seconds": 0.9759704999742098,
+  "python": "<historical interpreter path omitted>",
+  "version": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "source_hashes": {
+    "hlp-dac\\src\\experiments\\concurrency_validation\\__init__.py": "e99aa3e03d862adb11797501d1d2d504d581bce253af0dafe90f2cc95072d7b2",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\common.py": "049fc9c9e296830e437e51efffa0d7f830e241c51c153b1c82e612f2410bfeb1",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\frontier.py": "e1437d6a50e0ee40a307a0956e066506d5b36a4920feb51824c7f5900f913c81",
+    "hlp-dac\\src\\experiments\\concurrency_validation\\rebuild.py": "e5377fc85e7a3d99fda7fb4d857a820097627d2521e95254b83bd8946a11b6c0"
+  }
+}
