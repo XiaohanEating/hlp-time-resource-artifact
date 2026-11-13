@@ -2,6 +2,11 @@
   "algorithm": "sha256",
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 84,
+      "sha256": "39ff1f99b50bc0a39a60a4507504fd8970dd9a4a5c2e40c94175cfde92e63f75"
+    },
+    {
       "path": ".gitignore",
       "bytes": 156,
       "sha256": "ea6b86e38bb3e1922bf0e3b074f461ebda6ba292156117e13adf4f472a822aa4"
@@ -15,6 +20,11 @@
       "path": "NOTICE",
       "bytes": 545,
       "sha256": "540012470ca22c1e10c1746d44847a37f502e74d39a83200aadf4bc9972da869"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4671,
+      "sha256": "082025cd2c786699160d0746ff46849ebf79952c622fe9b57d372c86906df12a"
     },
     {
       "path": "provenance/assembly.json",
@@ -40,11 +50,6 @@
       "path": "pyproject.toml",
       "bytes": 479,
       "sha256": "74bfd6825e9f01975111d4314e75e5b3adad7a45cfbb3901ec99643dc722b853"
-    },
-    {
-      "path": "README.md",
-      "bytes": 4671,
-      "sha256": "082025cd2c786699160d0746ff46849ebf79952c622fe9b57d372c86906df12a"
     },
     {
       "path": "results/capacity_validation/allocation.json",
